@@ -1,0 +1,294 @@
+{
+  "selectedMapDayId": "b1f54c0c-df09-426d-9687-4019d5a4c633",
+  "days": [
+    {
+      "id": "03ab59bd-df54-44bd-a27c-7fc43125012f",
+      "titleZh": "第一天",
+      "titleEn": "Day 1",
+      "items": [
+        {
+          "itemId": "keflavik-international-airport",
+          "instanceId": "7ca85a63-f911-48c6-94b8-29c130a10d77"
+        },
+        {
+          "itemId": "reykjavik",
+          "instanceId": "a92d304d-52a6-4990-8a28-ad47eb8599dc"
+        },
+        {
+          "itemId": "thingvellir-national-park",
+          "instanceId": "f4ef341f-473c-4099-9e1e-716da1a7ce6c"
+        },
+        {
+          "itemId": "fridheimar",
+          "instanceId": "12d25cfb-5dd8-49c6-a17d-ab8c364d2ac1"
+        },
+        {
+          "itemId": "geysir",
+          "instanceId": "283cfdd5-03ec-4151-b967-7bfa8b75cf86"
+        },
+        {
+          "itemId": "gullfoss-falls",
+          "instanceId": "e5756fa8-fe48-4072-874f-b4a8504294c0"
+        },
+        {
+          "itemId": "hella",
+          "instanceId": "d12cb2fd-d043-4849-8899-45baa3e13798"
+        },
+        {
+          "itemId": "hestheimar",
+          "instanceId": "c12df4a9-078d-4021-b5b4-483127d1037a"
+        }
+      ]
+    },
+    {
+      "id": "0a67fd90-6ba8-4c4c-a2be-e4ddce444ca6",
+      "titleZh": "第二天",
+      "titleEn": "Day 2",
+      "items": [
+        {
+          "itemId": "hestheimar",
+          "instanceId": "85bc0892-2822-46be-86b6-174795c59520"
+        },
+        {
+          "itemId": "hella",
+          "instanceId": "2c1ddb3b-1618-4068-b0f9-c1dfc09d2ba6"
+        },
+        {
+          "itemId": "seljalandsfoss",
+          "instanceId": "c0e5b6ed-c8df-4bc9-acb8-faa2c2bbaa53"
+        },
+        {
+          "itemId": "dc3-airplane-wreck-eyvindarholt",
+          "instanceId": "23243189-2c7c-4229-b51f-dc3e14b8af53"
+        },
+        {
+          "itemId": "reynisfjara-beach",
+          "instanceId": "c84440e4-55fc-494f-a44e-b6890d2ce574"
+        },
+        {
+          "itemId": "skogafoss",
+          "instanceId": "df3692f6-798e-416b-872f-92c71c354181"
+        },
+        {
+          "itemId": "kronan-vik",
+          "instanceId": "de78be60-c821-4d58-ad90-3ac5675ba10a"
+        },
+        {
+          "itemId": "fjadrargljufur",
+          "instanceId": "15c9f8d4-e6f8-4759-bcbf-6808a1dc7fd4"
+        },
+        {
+          "itemId": "hofs",
+          "instanceId": "c32de24e-8033-4b4e-aec2-3215b841183b"
+        },
+        {
+          "itemId": "klausturhof-guesthouse",
+          "instanceId": "a30a1022-c161-4436-b34b-b9d979f9d0ed"
+        }
+      ]
+    },
+    {
+      "id": "5bdfff94-8afe-46fd-8dbe-f55a64d468a5",
+      "titleZh": "第三天",
+      "titleEn": "Day 3",
+      "items": [
+        {
+          "itemId": "klausturhof-guesthouse",
+          "instanceId": "61ddca87-c963-4ee7-8d24-8e7ae79bbe4b"
+        },
+        {
+          "itemId": "hofs",
+          "instanceId": "4cdfd562-d586-448c-b239-f91a95e1bf42"
+        },
+        {
+          "itemId": "skaftafell-glacier-hike",
+          "instanceId": "9e6b751c-18ac-47cc-9787-a2ed660fb1dc"
+        },
+        {
+          "itemId": "jokulsarlon-glacier-lagoon",
+          "instanceId": "4f3407d1-e908-4b13-a4e3-3c23c966f7b4"
+        },
+        {
+          "itemId": "jokulsarlon-glacier-lagoon-kayak-tour",
+          "instanceId": "16a82e83-9405-422c-a50b-5c77f48f8b90"
+        },
+        {
+          "itemId": "vestrahorn",
+          "instanceId": "85c28621-ff25-4aae-a251-be95f769e249"
+        },
+        {
+          "itemId": "netto-hofn",
+          "instanceId": "88abecdb-e184-42af-9d29-7630028b484d"
+        },
+        {
+          "itemId": "hofn",
+          "instanceId": "4332596c-d21b-4ce3-9a3f-8a7918fbe43a"
+        },
+        {
+          "itemId": "hotel-hofn",
+          "instanceId": "f946d423-b63d-4739-978f-42706a054ebf"
+        }
+      ]
+    },
+    {
+      "id": "ccb65894-a73d-4073-b494-85f55320bf3f",
+      "titleZh": "第四天",
+      "titleEn": "Day 4",
+      "items": [
+        {
+          "itemId": "hotel-hofn",
+          "instanceId": "e5c3c1df-dd79-4a06-a38d-bfb62cce477f"
+        },
+        {
+          "itemId": "hofn",
+          "instanceId": "047e32c9-18ab-452a-9f79-0f44dd1c74b0"
+        },
+        {
+          "itemId": "egilsstadir",
+          "instanceId": "b68011fa-2290-4815-86ad-4d73ce5c63e4"
+        },
+        {
+          "itemId": "bonus-egilsstadir",
+          "instanceId": "56169983-b687-44af-b3f6-26b4bd7e83f0"
+        },
+        {
+          "itemId": "seydisfjordur",
+          "instanceId": "b10b9987-44b2-4e4a-80b7-b6f52e4a151f"
+        },
+        {
+          "itemId": "gufu-waterfall",
+          "instanceId": "4643af08-63c5-4c7f-aab6-4d1154defa79"
+        },
+        {
+          "itemId": "vok-baths",
+          "instanceId": "aa6e997e-5335-4805-9854-922eb91b0087"
+        },
+        {
+          "itemId": "egilsstadir",
+          "instanceId": "809d6e3d-f089-4022-8253-9965e41a8934"
+        },
+        {
+          "itemId": "lake-hotel-gistihusid-egilsstadir",
+          "instanceId": "3a7ee601-30b7-41dd-aa4e-db149a401830"
+        }
+      ]
+    },
+    {
+      "id": "b1f54c0c-df09-426d-9687-4019d5a4c633",
+      "titleZh": "第五天",
+      "titleEn": "Day 5",
+      "items": [
+        {
+          "itemId": "lake-hotel-gistihusid-egilsstadir",
+          "instanceId": "a8dd836d-9bbc-440f-a912-5a1ec6aff7ce"
+        },
+        {
+          "itemId": "egilsstadir",
+          "instanceId": "44094226-9225-4101-9301-0d3981d75f3e"
+        },
+        {
+          "itemId": "studlagil-canyon-main-access",
+          "instanceId": "0a86abe5-dbd5-46c4-b11e-5929b53f572e"
+        },
+        {
+          "itemId": "borgarfjardarhofn",
+          "instanceId": "934019bd-6426-4efa-9aef-b11276b133f1"
+        },
+        {
+          "itemId": "dettifoss",
+          "instanceId": "88598f96-5250-4f17-947c-783e1b055d24"
+        },
+        {
+          "itemId": "krafla",
+          "instanceId": "df87636f-1e69-43ba-a497-4ca01067ad3e"
+        },
+        {
+          "itemId": "namafjall-hverir-viewpoint",
+          "instanceId": "b3c0baca-818e-4f06-bb90-af6a52e9c5c1"
+        },
+        {
+          "itemId": "grjotagja-cave",
+          "instanceId": "1251fed8-00ab-470e-8b43-37c4abad42d2"
+        },
+        {
+          "itemId": "hverfjall-volcano-trail",
+          "instanceId": "e74f3005-36bd-4e82-9c93-f67203c23cd4"
+        },
+        {
+          "itemId": "reykjahlid",
+          "instanceId": "d9e8e176-d29e-4add-a7a2-5a0286634478"
+        }
+      ]
+    },
+    {
+      "id": "c1168d3b-55bf-42fd-8e4f-d020258882f9",
+      "titleZh": "第六天",
+      "titleEn": "Day 6",
+      "items": [
+        {
+          "itemId": "reykjahlid",
+          "instanceId": "c4e162c5-c552-4345-90d0-713b93ffc08f"
+        },
+        {
+          "itemId": "godafoss-waterfall",
+          "instanceId": "1b2f86fe-4da4-4fd2-b5b0-2da762d53ccb"
+        },
+        {
+          "itemId": "akureyri",
+          "instanceId": "3484b561-3fae-4894-bc1c-831dc187e25c"
+        },
+        {
+          "itemId": "hvitserkur",
+          "instanceId": "576cb19e-bb97-4113-a444-44c8b96aa701"
+        },
+        {
+          "itemId": "kidka-wool-factory-shop",
+          "instanceId": "adbb1ed8-f822-4b09-b8c2-b971984c98e0"
+        },
+        {
+          "itemId": "midhraun-lava-resort",
+          "instanceId": "281c20db-45d8-45ba-875e-f3e4e694e43f"
+        }
+      ]
+    },
+    {
+      "id": "df385399-f3c5-481f-be21-4c1901a973a1",
+      "titleZh": "第七天",
+      "titleEn": "Day 7",
+      "items": [
+        {
+          "itemId": "midhraun-lava-resort",
+          "instanceId": "e42932f3-d73d-4fc6-bc44-9b8ac1498ba5"
+        },
+        {
+          "itemId": "ingjaldsholskirkja",
+          "instanceId": "9369d24d-3dea-4a0d-a4a6-72a120c669cc"
+        },
+        {
+          "itemId": "ytri-tunga",
+          "instanceId": "da63b003-165f-4695-bfd4-45316a7c44e9"
+        },
+        {
+          "itemId": "the-cave-vidgelmir",
+          "instanceId": "2e2490e3-179e-43e6-9233-63d55e5fdde9"
+        }
+      ]
+    },
+    {
+      "id": "c22c84ca-7652-4472-af27-adc46942e23e",
+      "titleZh": "第八天",
+      "titleEn": "Day 8",
+      "items": [
+        {
+          "itemId": "reykjavik",
+          "instanceId": "2de4a5d3-3154-4b53-941a-4fd672879355"
+        },
+        {
+          "itemId": "sky-lagoon",
+          "instanceId": "4cbd5d50-37ca-4ba6-bbf8-324941563358"
+        }
+      ]
+    }
+  ],
+  "savedAt": "2026-06-25T03:03:31.675Z"
+}

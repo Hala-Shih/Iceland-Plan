@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>冰島行程</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260703">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar" aria-label="旅程工具列 Trip toolbar">
+      <div>
+        <h1>冰島行程</h1>
+      </div>
+    </header>
+
+    <main class="planner-layout">
+      <aside class="library-panel" id="libraryPanel" aria-label="可加入行程的項目 Item library">
+        <div class="panel-heading">
+          <div>
+            <h2>冰島行程項目</h2>
+          </div>
+          <button class="ghost-button panel-toggle" id="toggleLibrary" type="button" aria-controls="libraryPanel" aria-expanded="true">收合</button>
+        </div>
+
+        <label class="search-field">
+          <span>搜尋</span>
+          <input id="searchInput" type="search" placeholder="glacier、beach、volcano..." autocomplete="off">
+        </label>
+
+        <div class="filters" id="categoryFilters" aria-label="分類篩選 Category filters"></div>
+        <div class="item-list" id="itemLibrary" aria-label="可拖曳項目 Draggable items"></div>
+      </aside>
+
+      <section class="itinerary-panel" aria-label="行程 Itinerary">
+        <div class="itinerary-header">
+          <div class="itinerary-title-slot">
+            <button class="library-restore-button" id="restoreLibrary" type="button" aria-controls="libraryPanel" aria-expanded="false">展開項目</button>
+          </div>
+          <div class="itinerary-actions">
+            <button class="primary-button" id="exportPlan" type="button" aria-label="匯出計劃 Export plan">匯出</button>
+            <button class="primary-button" id="importPlan" type="button" aria-label="匯入計劃 Import plan">匯入</button>
+            <button class="primary-button" id="addDay" type="button" aria-label="新增一天 Add day">新增一天</button>
+          </div>
+          <input type="file" id="importFile" type="file" accept=".json" style="display:none;" aria-label="計劃檔案 Plan file">
+        </div>
+
+        <div class="days-shell" data-view-panel="itinerary">
+          <button class="days-scroll-button days-scroll-button-left" id="scrollDaysLeft" type="button" aria-label="向左捲動行程 Scroll itinerary left" data-icon="‹"></button>
+          <div class="days" id="daysBoard"></div>
+          <button class="days-scroll-button days-scroll-button-right" id="scrollDaysRight" type="button" aria-label="向右捲動行程 Scroll itinerary right" data-icon="›"></button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <template id="itemCardTemplate">
+    <article class="item-card" draggable="true">
+      <div class="item-photo"></div>
+      <div class="item-copy">
+        <div class="item-meta">
+          <span class="category-pill"></span>
+          <span class="duration"></span>
+        </div>
+        <h3></h3>
+        <p></p>
+      </div>
+    </article>
+  </template>
+
+  <template id="dayTemplate">
+    <section class="day-column">
+      <div class="day-heading">
+        <div>
+          <p></p>
+          <h3></h3>
+        </div>
+        <button class="icon-button remove-day" type="button" aria-label="移除這一天 Remove day">×</button>
+      </div>
+      <div class="drop-zone" tabindex="0"></div>
+    </section>
+  </template>
+
+  <script src="app.js?v=20260703-3"></script>
+</body>
+</html>
