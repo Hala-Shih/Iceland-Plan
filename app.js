@@ -622,6 +622,7 @@ function getCategory(categoryId) {
 const storageKey = 'iceland-trip-planner-plan';
 const storageBackupKey = 'iceland-trip-planner-plan-backup';
 const libraryCollapsedStorageKey = 'iceland-trip-planner-library-collapsed';
+const PLAN_JSON_URL = 'iceland-trip-2026-07-03.json';
 const mobileReadOnlyMediaQuery = window.matchMedia('(max-width: 620px)');
 function getLibraryItem(itemId) {
   return libraryItems.find((item) => item.id === itemId);
@@ -767,6 +768,40 @@ function createDefaultDays() {
   }));
 }
 
+function applyPlanToState(plan) {
+  if (!plan?.days || !Array.isArray(plan.days)) return false;
+
+  state.days = plan.days.map((day, dayIndex) => ({
+    id: day.id || crypto.randomUUID(),
+    titleZh: day.titleZh || `第${toChineseNumber(dayIndex + 1)}天`,
+    titleEn: day.titleEn || `Day ${dayIndex + 1}`,
+    items: Array.isArray(day.items)
+      ? day.items.filter((item) => getLibraryItem(item.itemId)).map((item) => ({
+          itemId: item.itemId,
+          instanceId: item.instanceId || crypto.randomUUID(),
+        }))
+      : [],
+  }));
+  renameDays();
+  return true;
+}
+
+async function loadPlanFromJson() {
+  try {
+    const response = await fetch(`${PLAN_JSON_URL}?v=${Date.now()}`, { cache: 'no-store' });
+    if (!response.ok) return false;
+
+    const plan = await response.json();
+    const applied = applyPlanToState(plan);
+    if (!applied) return false;
+
+    savePlan();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function loadSavedPlan() {
   try {
     const savedPlan = chooseSavedPlan(
@@ -774,19 +809,7 @@ function loadSavedPlan() {
       parseSavedPlan(storageBackupKey),
     );
     if (!savedPlan?.days?.length) return;
-
-    state.days = savedPlan.days.map((day, dayIndex) => ({
-      id: day.id || crypto.randomUUID(),
-      titleZh: day.titleZh || `第${toChineseNumber(dayIndex + 1)}天`,
-      titleEn: day.titleEn || `Day ${dayIndex + 1}`,
-      items: Array.isArray(day.items)
-        ? day.items.filter((item) => getLibraryItem(item.itemId)).map((item) => ({
-            itemId: item.itemId,
-            instanceId: item.instanceId || crypto.randomUUID(),
-          }))
-        : [],
-    }));
-    renameDays();
+    applyPlanToState(savedPlan);
   } catch {
     localStorage.removeItem(storageKey);
   }
@@ -1292,25 +1315,12 @@ document.querySelector('#importFile').addEventListener('change', (event) => {
   reader.onload = (e) => {
     try {
       const plan = JSON.parse(e.target.result);
-      
-      if (!plan.days || !Array.isArray(plan.days)) {
+
+      if (!applyPlanToState(plan)) {
         alert('無效的計畫檔案 / Invalid plan file');
         return;
       }
-      
-      // Restore the plan
-      state.days = plan.days.map((day, dayIndex) => ({
-        id: day.id || crypto.randomUUID(),
-        titleZh: day.titleZh || `第${toChineseNumber(dayIndex + 1)}天`,
-        titleEn: day.titleEn || `Day ${dayIndex + 1}`,
-        items: Array.isArray(day.items)
-          ? day.items.filter((item) => getLibraryItem(item.itemId)).map((item) => ({
-              itemId: item.itemId,
-              instanceId: item.instanceId || crypto.randomUUID(),
-            }))
-          : [],
-      }));
-      
+
       savePlan();
       render();
       alert('計畫已恢復！/ Plan restored successfully!');
@@ -1325,12 +1335,20 @@ document.querySelector('#importFile').addEventListener('change', (event) => {
   event.target.value = '';
 });
 
-loadSavedPlan();
-setLibraryCollapsed(localStorage.getItem(libraryCollapsedStorageKey) === 'true', false);
-setMobileReadOnlyMode(mobileReadOnlyMediaQuery.matches);
-loadSpotMapLinksFromJson();
-mobileReadOnlyMediaQuery.addEventListener('change', (event) => {
-  setMobileReadOnlyMode(event.matches);
+async function bootstrap() {
+  const loadedFromJson = await loadPlanFromJson();
+  if (!loadedFromJson) {
+    loadSavedPlan();
+  }
+
+  setLibraryCollapsed(localStorage.getItem(libraryCollapsedStorageKey) === 'true', false);
+  setMobileReadOnlyMode(mobileReadOnlyMediaQuery.matches);
+  await loadSpotMapLinksFromJson();
+  mobileReadOnlyMediaQuery.addEventListener('change', (event) => {
+    setMobileReadOnlyMode(event.matches);
+    render();
+  });
   render();
-});
-render();
+}
+
+bootstrap();
